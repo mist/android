@@ -564,5 +564,8 @@
     <string name="noification_message_ready_to_install_apk">Klicke zum installieren</string>
     <string name="noification_title_downloading_apk">Neue FetLife App wird heruntergeladen</string>
     <string name="noification_message_downloading_apk">Im Gange</string>
+    <string name="settings_category_general_language">Spracheinstellungen</string>
+    <string name="settings_title_general_language">Sprache ändern</string>
+    <string name="settings_entry_general_language_system_language">Systemstandard</string>
 
 </resources>

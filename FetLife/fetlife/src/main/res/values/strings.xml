@@ -458,6 +458,9 @@
     <string name="settings_category_general_vanilla">App Flavor Settings</string>
     <string name="settings_title_general_vanilla">Go Vanilla</string>
     <string name="settings_summary_general_vanilla">Use FL instead of FetLife as App name and use simple FL icon instead of FetLife logo as an App icon</string>
+    <string name="settings_category_general_language">Language Settings</string>
+    <string name="settings_title_general_language">Change Language</string>
+    <string name="settings_entry_general_language_system_language">system default</string>
     <!--
     <string name="title_switch_flavor_confirmation">Changing App Flavor</string>
     <string name="message_switch_flavor_confirmation">App will be closed after change.\nDo you want to continue?</string>
