@@ -2892,7 +2892,7 @@ public class FetLifeApiIntentService extends JobIntentService {
                 return BuildConfig.CLIENT_SECRET;
             }
 
-            PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+            PackageInfo pInfo = getPackageManager().getPackageInfo("com.bitlove.fetlife", PackageManager.GET_SIGNATURES);
             byte[] cert = pInfo.signatures[0].toByteArray();
             InputStream input = new ByteArrayInputStream(cert);
             CertificateFactory cf = CertificateFactory.getInstance("X509");

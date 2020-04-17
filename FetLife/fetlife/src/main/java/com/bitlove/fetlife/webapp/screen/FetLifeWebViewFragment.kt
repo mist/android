@@ -259,7 +259,7 @@ class FetLifeWebViewFragment : Fragment() {
     }
 
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         val url = web_view?.url ?: getStringArgument(ARG_PAGE_URL)
         val optionsMenuWebNavigation = FetLifeApplication.getInstance().webAppNavigation.getOptionsMenuNavigationList(url)
                 ?: return
@@ -269,7 +269,7 @@ class FetLifeWebViewFragment : Fragment() {
         }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         item ?: return false
         val url = FetLifeApplication.getInstance().webAppNavigation.getOptionMenuNavigationUrl(item.itemId)
         val navigated = FetLifeApplication.getInstance().webAppNavigation.navigate(Uri.parse(url), web_view, activity)

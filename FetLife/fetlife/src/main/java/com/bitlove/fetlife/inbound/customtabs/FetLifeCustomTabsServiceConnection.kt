@@ -17,13 +17,13 @@ class FetLifeCustomTabsServiceConnection : CustomTabsServiceConnection() {
         }
     }
 
-    override fun onCustomTabsServiceConnected(name: ComponentName?, client: CustomTabsClient?) {
+    override fun onCustomTabsServiceConnected(name: ComponentName, client: CustomTabsClient) {
         client?.warmup(0)
         var session = client?.newSession(customTabCallback)
         FetLifeApplication.getInstance().customTabsSession = session
     }
 
-    override fun onServiceDisconnected(name: ComponentName?) {
+    override fun onServiceDisconnected(name: ComponentName) {
         FetLifeApplication.getInstance().customTabsSession = null
     }
 

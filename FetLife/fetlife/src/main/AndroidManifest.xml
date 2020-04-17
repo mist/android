@@ -209,7 +209,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.bitlove.fetlife.fileprovider"
+            android:authorities="com.bitlove.fetlife.dev.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

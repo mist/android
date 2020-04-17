@@ -230,7 +230,7 @@ public class LoginActivity extends Activity {
         if (FetLifeApiIntentService.JSON_VALUE_ERROR_LOGIN_2FA_ENABLED.equalsIgnoreCase(errorCode)) {
             MessageDialog.show(this,getResources().getString(R.string.error_login_failed),getResources().getString(R.string.error_login_2fa_enabled));
         } else if (loginFailedEvent.isServerConnectionFailed()) {
-            showToast(getResources().getString(R.string.error_connection_failed));
+            showToast(getResources().getString(R.string.error_connection_failed) + "Errorcode: " + loginFailedEvent.getServerErrorCode());
         } else {
             mPasswordView.setError(getString(R.string.error_incorrect_password));
         }

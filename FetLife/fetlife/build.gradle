@@ -71,14 +71,14 @@ android {
                                     onesignal_google_project_number: "875783571094",
                                     fabricApiKey                   : "${ext.fabricApiKey}"]
 
-            buildConfigField "String", "CLIENT_ID", "\"d8f8ebd522bf5123c3f29db3c8faf09029a032b44f0d1739d4325cd3ccf11570\""
-            buildConfigField "String", "CLIENT_SECRET", "\"47273306a9a3a3448a908748eff13a21a477cc46f6a3968b5c7d05611c4f2f26\""
-            buildConfigField "String", "REDIRECT_URL", "\"urn:ietf:wg:oauth:2.0:oob\""
-
-            buildConfigField "String", "SECURE_API_IV", "\"\""
+            buildConfigField "String", "CLIENT_ID", "\"7334c23954813ae31a3a3e203f86ea909b4deb34707fa18e2475ba0424025da5\""
+            buildConfigField "String", "CLIENT_SECRET", "\"YoZv1To+R8ZqoHOm7l+YWVtNfukBUVsQZ87EOJO8xFOt/De6Khy2XBuvbDxunkBQvPXxnn8/WUy2LPKMOkvmWOy5GWLnfP+qhDu5B28u1xU=\""
+            buildConfigField "String", "REDIRECT_URL", "\"fetlifeapp://oauth/callback\""
+            buildConfigField "String", "SECURE_API_IV", "\"YZKCEid05RDUX7tsXBRFgg==\""
 
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix = '.dev'
 
         }
 
@@ -173,19 +173,19 @@ dependencies {
 
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
 
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
-    implementation 'androidx.cardview:cardview:1.0.0-beta01'
-    implementation 'androidx.browser:browser:1.0.0-beta01'
-    implementation 'androidx.multidex:multidex:2.0.0'
-    implementation 'androidx.preference:preference:1.0.0-beta01'
-    implementation 'androidx.legacy:legacy-preference-v14:1.0.0-beta01'
-    implementation 'androidx.legacy:legacy-support-core-utils:1.0.0-beta01'
+    implementation 'androidx.appcompat:appcompat:1.2.0-beta01'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.browser:browser:1.3.0-alpha01'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.legacy:legacy-preference-v14:1.0.0'
+    implementation 'androidx.legacy:legacy-support-core-utils:1.0.0'
 
     implementation 'com.google.android.material:material:1.0.0-beta01'
 
     implementation 'com.google.maps.android:android-maps-utils:0.5+'
 
-    implementation('com.crashlytics.sdk.android:crashlytics:2.9.4@aar') {
+    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
         transitive = true
     }
 
@@ -263,8 +263,8 @@ android.applicationVariants.all { variant ->
     def generateResourcesTask = project.tasks.getByName("fabricGenerateResources${variantSuffix}")
     def generatePropertiesTask = task("fabricGenerateProperties${variantSuffix}") {
         Properties properties = new Properties()
-        properties.put("apiSecret", variant.buildType.fabricApiSecret)
-        properties.put("apiKey", variant.buildType.fabricApiKey)
+        //properties.put("apiSecret", variant.buildType.fabricApiSecret)
+        //properties.put("apiKey", variant.buildType.fabricApiKey)
         PropertiesUtils.injectPropertyInFile(crashlyticsProperties, properties, "")
     }
     generateResourcesTask.dependsOn generatePropertiesTask
