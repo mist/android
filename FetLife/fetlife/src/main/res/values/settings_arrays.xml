@@ -51,4 +51,22 @@
         <item>@string/settings_value_notification_vibration_long</item>
     </string-array>
 
+
+    <string name="settings_value_general_language_default"></string>
+    <string name="settings_value_general_language_english">en</string>
+    <string name="settings_value_general_language_german">de</string>
+
+    <string-array name="settings_entries_general_language">
+        <item>@string/settings_entry_general_language_system_language</item>
+        <item>English</item>
+        <item>Deutsch</item>
+    </string-array>
+
+    <string-array name="settings_values_general_language">
+        <item>@string/settings_value_general_language_default</item>
+        <item>@string/settings_value_general_language_english</item>
+        <item>@string/settings_value_general_language_german</item>
+    </string-array>
+
+
 </resources>

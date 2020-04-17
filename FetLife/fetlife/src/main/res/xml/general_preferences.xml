@@ -23,4 +23,18 @@
 
     </com.bitlove.fetlife.view.widget.BoldPreferenceCategory>
 
+    <com.bitlove.fetlife.view.widget.BoldPreferenceCategory
+        android:title="@string/settings_category_general_language">
+
+        <ListPreference
+            android:key="@string/settings_key_general_language"
+            android:title="@string/settings_title_general_language"
+            android:entries="@array/settings_entries_general_language"
+            android:entryValues="@array/settings_values_general_language"/>
+
+    </com.bitlove.fetlife.view.widget.BoldPreferenceCategory>
+
+
+
+
 </PreferenceScreen>
